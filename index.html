@@ -27,7 +27,7 @@
 
      }
           #lbl_dau {
-        font-size:100px;
+        font-size:150px;
         padding:10px 0;
         background-color: #fff;
         min-height:100px;
@@ -70,7 +70,7 @@ jQuery(function(){
      setTimeout(function(){ $('#lbl_dau').removeClass('flash')},1200)
   })
     $('#btn_van').click(function(){
-   var van = arr_van[Math.floor(Math.random() * (arr_dau.length-1))];
+   var van = arr_van[Math.floor(Math.random() * (arr_van.length-1))];
      $('#lbl_dau').text(van).addClass('flash');
      setTimeout(function(){ $('#lbl_dau').removeClass('flash')},1200)
   })
