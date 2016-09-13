@@ -44,6 +44,9 @@
         transition: background-color 1000ms linear;
         /* */
     }
+     #ck_lesson{padding:10px 0; font-family: Georgia, Serif; font-size:16px;}
+    #ck_lesson input{ margin:0 5px 0 25px; }
+
     </style> 
   </head>
   <body>
@@ -51,8 +54,17 @@
 
     <h1 id="lbl_dau"></h1>
    
-
+      <div id="ck_lesson">
+          <input type="checkbox" id='l1' checked value="be,bè,bé,bẻ,bẽ,bẹ,be be,be bé,bè bè,bẻ bẹ,bé bẻ bẹ,bè be bé">e-b
+          <input type="checkbox" id='l2' value="bể,vé,vẻ,vẽ,bế,vệ,vế,về,vè,ve ve,bệ vệ, vè vè,bề bề,bế bé,ve ve ve, ve vẻ vè ve,bé vẽ ve,bé vẽ bê">ê-v
+          <input type="checkbox" id='l3' value="lẹ,hé,hệ,lẻ,lẽ,hề,lệ,hè,lễ,hễ,he hé,le le,lề hè,hề hề,hè về,bé vẽ lê, bé lệ vẽ hề">l-h
+          <input type="checkbox" id='l4' value="có,lò,cọ,vỏ,lo,ho,hò,cỏ,họ,võ,lọ,cò,lò cò,vò võ,vó bè,bó cỏ,vo ve,bé lê vẽ cò,bé có bó cỏ">o-c
+        </div>
       <div id="btn_group" class="text-center">
+          
+  
+
+
           <button id="btn_dau" type="button" class="btn btn-primary">Dấu</button>
           <button id="btn_van" type="button" class="btn btn-success">Vần</button>
      </div>
@@ -62,11 +74,21 @@
     <script src="js/jquery.min.js"></script>
     
 <script>
-
+var arr_van =[];
 jQuery(function(){
    var arr_dau = ["~","?","/","/","/","/","\\",".","~","?",".","~","?","/","\\","."];
-   var arr_van = ["bé","bé","bẻ","be","bẹ","bế","bê","bệ","ve","vé","vẻ","vè","về","vệ"];
+   arr_van = $('#ck_lesson input:checked').val().split(',');
    
+    $('#ck_lesson input').change(function(){
+      arr_van=[];
+      $('#ck_lesson input:checked').each(function(){
+            arr_van = arr_van.concat($(this).val().split(','));
+
+      })
+      
+   
+    })
+
    $('#btn_dau').click(function(){
    var dau = arr_dau[Math.floor(Math.random() * (arr_dau.length-1))];
      $('#lbl_dau').text(dau).addClass('flash');
