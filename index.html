@@ -46,6 +46,10 @@
         transition: background-color 1000ms linear;
         /* */
     }
+
+    .input{float:left;}
+
+
      #ck_lesson{padding:10px 0; font-family: 'Noto Sans', sans-serif; font-style:italic;font-size:20px;}
     #ck_lesson input{ margin:0 5px 0 25px; }
     @media screen and (max-width: 400px) {
@@ -64,21 +68,27 @@
 
     <h1 id="lbl_dau"></h1>
    
-      <div id="ck_lesson">
-          <input type="checkbox" id='l0' checked value="th,ch,đ,kh,k,ph,nh,gh,qu,gi,ng,ngh,tr,ia,ua,ưa">Vần: th-ch-đ-kh-k-ph-nh-gh-qu-gi-ng-ngh-tr-ia-ua-ưa </br>
-          <input type="checkbox" id='l1'  value="be,bè,bé,bẻ,bẽ,bẹ,be be,be bé,bè bè,bẻ bẹ,bé bẻ bẹ,bè be bé">e-b
-          <input type="checkbox" id='l2' value="bể,vé,vẻ,vẽ,bế,vệ,vế,về,vè,ve ve,bệ vệ, vè vè,bề bề,bế bé,ve ve ve, ve vẻ vè ve,bé vẽ ve,bé vẽ bê">ê-v
-          <input type="checkbox" id='l3' value="lẹ,hé,hệ,lẻ,lẽ,hề,lệ,hè,lễ,hễ,he hé,le le,lề hè,hề hề,hè về,bé vẽ lê, bé lệ vẽ hề">l-h
-          <input type="checkbox" id='l4' value="có,lò,cọ,vỏ,lo,ho,hò,cỏ,họ,võ,lọ,cò,lò cò,vò võ,vó bè,bó cỏ,vo ve,bé lê vẽ cò,bé có bó cỏ">o-c
-          <input type="checkbox" id='l5' value="vồ,hổ,cô,cổ,cỗ,vỡ,hồ,hỗ,vỗ,cờ,cổ lọ,lọ hồ,vở vẽ,vỗ bờ,lề vở,bố bó cỏ,cô lê bế bé,vẽ bê,cổ cò,bò bê,võ vẽ,bó hẹ,vơ cỏ,cô bế bé về,cô có lá cờ,cô vỗ về bé,bé vẽ hổ,vẽ hề">ô-ơ
-          <input type="checkbox" id='l6' value="ô li,cá cờ,lí lẽ,va li,ba lô,hả hê,hồ cá,lá bí,ba ba, bi ve, lá cờ,bi bô">i-a
-          <input type="checkbox" id='l7' value="nơ,lọ mẹ,cá mè,lá mơ,lọ mọ,no nê,ba má,lễ mễ,lề mề,na ná,lơ mơ,bố mẹ,bé mở vở vẽ,mẹ bế bé mi,mẹ mở lọ hồ,mẹ bi mổ cá mè,dì na bó lá me">n-m
-          <input type="checkbox" id='l8' value="bí đỏ,bờ đê,lá đa,da dẻ,vỏ đỗ,lễ độ,da bò,lò dò,cờ đỏ,lí do,mẹ bổ bí đỏ,ở bờ đê có dế,cô có ca đỗ,mẹ đi đò về bà">d-đ
-          <input type="checkbox" id='l9' value="tổ cò,thỏ mẹ,thơ ca,ô tô,tô vẽ,thi đỗ,thợ nề,tỉ mỉ,lá thị,da thỏ, thi đố,hò dô ta,tí mở ti vi,bé hà tô lá cờ đỏ,bố thi là thợ mỏ,cò mẹ tha cá về tổ,cá mè thì to. cá cờ thì bé">t-th
-          <input type="checkbox" id='l10' value="lá thư,củ từ,thủ đô,to bự,no đủ,tự do,cổ vũ,tu hú,hé nụ,thủ thỉ,thứ tự,thú vị,mẹ có cá thu,thủ đô có bờ hồ,thư tư bé đi thi vẽ">u-ư
-          <input type="checkbox" id='l11' value="xe lu,tô chữ,tủ chè,cô chú,lò xo,che chở,xe chỉ,vé xe,chị cả,cha mẹ,chả cá,thợ xẻ,chị hà là chị cả,bà cho bé chú chó xù,bà và mẹ xe chỉ,xe ô tô chở bố mẹ về thủ đô,me thu đi chợ mơ">x-ch
-          <input type="checkbox" id='l12' value="vỏ sò,su sê,bó rạ,ca sĩ,sở thú,chú rể,sư tử,sơ mi,nở rộ,lọ sứ, số ba,sĩ số,rễ si xù xì,ở hồ có cá rô,cô thu là ca sĩ, ở thủ đô có sở thú">s-r 
-          <input type="checkbox" id='l12' value="kì lạ,cũ kĩ,chữ kí,cá khô,kĩ sư,kì cọ,kẻ vở,lá khô,chú khỉ,kì đà,mẹ kì cọ lọ sứ,bà có cá kho tộ,bé đi khe khẽ,cô kể cho bé về chú chó kì lạ,kha kẻ vở để vẽ là cá">k-kh
+      <div id="ck_lesson" class="row">
+          <div class="input"><input type="checkbox" id='l1'  value="be,bè,bé,bẻ,bẽ,bẹ,be be,be bé,bè bè,bẻ bẹ,bé bẻ bẹ,bè be bé">e-b</div>
+          <div class="input"><input type="checkbox" id='l2' value="bể,vé,vẻ,vẽ,bế,vệ,vế,về,vè,ve ve,bệ vệ, vè vè,bề bề,bế bé,ve ve ve, ve vẻ vè ve,bé vẽ ve,bé vẽ bê">ê-v</div>
+          <div class="input"><input type="checkbox" id='l3' value="lẹ,hé,hệ,lẻ,lẽ,hề,lệ,hè,lễ,hễ,he hé,le le,lề hè,hề hề,hè về,bé vẽ lê, bé lệ vẽ hề">l-h</div>
+          <div class="input"><input type="checkbox" id='l4' value="có,lò,cọ,vỏ,lo,ho,hò,cỏ,họ,võ,lọ,cò,lò cò,vò võ,vó bè,bó cỏ,vo ve,bé lê vẽ cò,bé có bó cỏ">o-c</div>
+          <div class="input"><input type="checkbox" id='l5' value="vồ,hổ,cô,cổ,cỗ,vỡ,hồ,hỗ,vỗ,cờ,cổ lọ,lọ hồ,vở vẽ,vỗ bờ,lề vở,bố bó cỏ,cô lê bế bé,vẽ bê,cổ cò,bò bê,võ vẽ,bó hẹ,vơ cỏ,cô bế bé về,cô có lá cờ,cô vỗ về bé,bé vẽ hổ,vẽ hề">ô-ơ</div>
+          <div class="input"><input type="checkbox" id='l6' value="ô li,cá cờ,lí lẽ,va li,ba lô,hả hê,hồ cá,lá bí,ba ba, bi ve, lá cờ,bi bô">i-a</div>
+          <div class="input"><input type="checkbox" id='l7' value="nơ,lọ mẹ,cá mè,lá mơ,lọ mọ,no nê,ba má,lễ mễ,lề mề,na ná,lơ mơ,bố mẹ,bé mở vở vẽ,mẹ bế bé mi,mẹ mở lọ hồ,mẹ bi mổ cá mè,dì na bó lá me">n-m</div>
+          <div class="input"><input type="checkbox" id='l8' value="bí đỏ,bờ đê,lá đa,da dẻ,vỏ đỗ,lễ độ,da bò,lò dò,cờ đỏ,lí do,mẹ bổ bí đỏ,ở bờ đê có dế,cô có ca đỗ,mẹ đi đò về bà">d-đ</div>
+          <div class="input"><input type="checkbox" id='l9' value="tổ cò,thỏ mẹ,thơ ca,ô tô,tô vẽ,thi đỗ,thợ nề,tỉ mỉ,lá thị,da thỏ, thi đố,hò dô ta,tí mở ti vi,bé hà tô lá cờ đỏ,bố thi là thợ mỏ,cò mẹ tha cá về tổ,cá mè thì to. cá cờ thì bé">t-th</div>
+          <div class="input"><input type="checkbox" id='l10' value="lá thư,củ từ,thủ đô,to bự,no đủ,tự do,cổ vũ,tu hú,hé nụ,thủ thỉ,thứ tự,thú vị,mẹ có cá thu,thủ đô có bờ hồ,thư tư bé đi thi vẽ">u-ư</div>
+          <div class="input"><input type="checkbox" id='l11' value="xe lu,tô chữ,tủ chè,cô chú,lò xo,che chở,xe chỉ,vé xe,chị cả,cha mẹ,chả cá,thợ xẻ,chị hà là chị cả,bà cho bé chú chó xù,bà và mẹ xe chỉ,xe ô tô chở bố mẹ về thủ đô,me thu đi chợ mơ">x-ch</div>
+          <div class="input"><input type="checkbox" id='l12' value="vỏ sò,su sê,bó rạ,ca sĩ,sở thú,chú rể,sư tử,sơ mi,nở rộ,lọ sứ, số ba,sĩ số,rễ si xù xì,ở hồ có cá rô,cô thu là ca sĩ, ở thủ đô có sở thú">s-r </div>
+          <div class="input"><input type="checkbox"  value="kì lạ,cũ kĩ,chữ kí,cá khô,kĩ sư,kì cọ,kẻ vở,lá khô,chú khỉ,kì đà,mẹ kì cọ lọ sứ,bà có cá kho tộ,bé đi khe khẽ,cô kể cho bé về chú chó kì lạ,kha kẻ vở để vẽ là cá">k-kh</div> 
+          <div class="input"><input type="checkbox"  value="phố cổ,nho khô,pha lê,nhà cổ,nhà thơ,nhỏ bé,khu phố,nha sĩ,phi cơ,cà phê,phà chở ô tô,phố xá có nhà to,bò thở phì phò,bé nhổ cỏ cho bà,đi xa nhà,nhi nhớ ba mẹ và bé thư">p-ph-nh</div>
+          <div class="input"><input type="checkbox"  value="xẻ gỗ,ghi nhớ,nhà ga,ghi ta,ghế sô pha,tủ gỗ,phở gà,gồ ghề,ghế đá,cô thu gỡ cá cho bà,chú tư xẻ gỗ,nhà hà có ghế sô pha,bố chở bà ra ga,bà nghé nhà thi,bà cho bé gà và khế">g-gh</div>
+          <div class="input"><input type="checkbox"  value="giỏ cá,tổ quạ,chả quế,giá đỗ,cá quả,dự giờ,cụ già,giò chả,quê nhà,gia vị,chú quế cho bé quả mơ,bố chở bé đi qua phố nhỏ,bà cho bé đủ thứ quà quê:giò-chả-giá đỗ">q-qu-gi</div>
+          <div class="input"><input type="checkbox"  value="lá ngô,nghỉ hè,ngã ba,đề nghị,ngô nghê,từ ngữ,bỡ ngỡ,củ nghệ,ru ngủ,ngũ quả,mẹ ru bé ngủ,về nhà bà đi qua ba ngã tư,nghĩ lễ bố cho cả nhà đi hồ ba bể,ở nhà nghỉ có ti vi; bể cá và cả ga ra ô tô">ng-ngh</div>
+          <div class="input"><input type="checkbox"  value="vị trí,lá tre,ý tứ,y sĩ,tri kỉ,ý nghĩ,nhà trẻ,như ý,ý chí,trù phú,nhà trọ,sổ y bạ,pha trà,quý giá,bé na đi nhà trẻ,quê bé có tre ngà,bà bế hà ra y tế,cô y tá ghi sổ y bạ cho hà">y-tr</div>
+          <div class="input"><input type="checkbox"  value="đĩa sứ,bia đá,bìa vở,chia quà,ý nghĩa,lá mía,trỉa đỗ,đỏ tía,địa lí,chia sẻ,bà có lá tía tô,mẹ đổ đỗ ra nia,bé có vở bìa đỏ,chị và bé đi bộ ở vỉa hè">ia</div>
+          <div class="input"><input type="checkbox"  value="dưa bở,mùa thu,cua đá,cửa sổ,sữa chua,chú rùa,tre nứa,gió mùa,nô đùa,lửa đỏ,bé phi ngựa gỗ,mẹ ru bé ngủ trưa,bé và chị nô đùa ở nhà bà,bữa trưa có cá và dưa chua">ua-ưa</div>
 
 
 
