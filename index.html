@@ -36,7 +36,13 @@
         transition: all 500ms linear;
         font-family: 'Noto Serif', serif;
     }
-
+   #lbl_dau span{
+      cursor: pointer;
+      
+   }
+   #lbl_dau span.hl,#lbl_dau span:hover{
+     background:rgba(239,231,92,.5);
+   }
    #lbl_dau.flash{
         background-color: #efe75c;
         -webkit-transition: background-color 1000ms linear;
@@ -89,6 +95,12 @@
           <div class="input"><input type="checkbox"  value="vị trí,lá tre,ý tứ,y sĩ,tri kỉ,ý nghĩ,nhà trẻ,như ý,ý chí,trù phú,nhà trọ,sổ y bạ,pha trà,quý giá,bé na đi nhà trẻ,quê bé có tre ngà,bà bế hà ra y tế,cô y tá ghi sổ y bạ cho hà">y-tr</div>
           <div class="input"><input type="checkbox"  value="đĩa sứ,bia đá,bìa vở,chia quà,ý nghĩa,lá mía,trỉa đỗ,đỏ tía,địa lí,chia sẻ,bà có lá tía tô,mẹ đổ đỗ ra nia,bé có vở bìa đỏ,chị và bé đi bộ ở vỉa hè">ia</div>
           <div class="input"><input type="checkbox"  value="dưa bở,mùa thu,cua đá,cửa sổ,sữa chua,chú rùa,tre nứa,gió mùa,nô đùa,lửa đỏ,bé phi ngựa gỗ,mẹ ru bé ngủ trưa,bé và chị nô đùa ở nhà bà,bữa trưa có cá và dưa chua">ua-ưa</div>
+          <div class="input"><input type="checkbox"  value="lái xe,củ cải,trại hè,bãi cỏ,củ tỏi,cái còi,gói quà,quả vải,mái nhà,quả roi,chai lọ,tài giỏi,bò bê nhai cỏ,chú voi có cái vòi dài,bé đi dự trại hè,bố lái xe đưa bé về quê">oi-ai</div>
+          <div class="input"><input type="checkbox"  value="lời mời,sợi chỉ,hội chợ,cối đá,đồ chơi,lối đi,cá hồi,đôi đũa,cái gối,bộ đội,múa rối,cái nồi,trời mưa xối xả,mẹ thổi xôi lúa mới,bố Khôi rửa cối để giã giò">ôi-ơi</div>
+          <div class="input"><input type="checkbox"  value="bó củi,cùi dừa,khe núi,búi cỏ,túi vải,múi khế,thưa gửi,đùi gà,gửi quà,chia vui,mùi vị,mưa bụi,gió thổi qua khe núi,cả nhà vui khi bố đi xa về,quê nội Chi có đồi núi,bé gửi thư cho chú bộ đội">ui-ưi</div>
+          <div class="input"><input type="checkbox"  value="tuổi thơ,cá đuối,nụ cười,khe suối,gói muối,lưới cá,tươi vui,buổi tối,lá chuối,lò sưởi,bé Na đã ba tuổi rồi,Mẹ mua cá tươi ở chợ,chú nai lội qua suối nhỏ">uôi-ươi</div>
+          <div class="input"><input type="checkbox"  value="cỏ may,thầy cô,nhà máy,chạy nhảy,giỏ mây,trái cây,khay nhựa,ngày mai,đôi giày,dây phơi,suối chảy qua khe núi,bé vừa ngủ dậy,má đỏ hây hây">ay-â-ây</div>
+          <div class="input"><input type="checkbox"  value="kẹo kéo,gáo nhựa,cây gạo,khéo tay,quả táo,tờ báo,cô giáo,lời chào,thể thao,gió bão,bé ngồi thổi sáo,chú bộ đội có mũ tai bèo,suối chảy rì rào giữa khe đá,nhà bà nội có cây táo và cây vải">eo-ao</div>
 
 
 
@@ -129,12 +141,23 @@ jQuery(function(){
      $('#lbl_dau').text(dau).addClass('flash');
      setTimeout(function(){ $('#lbl_dau').removeClass('flash')},1200)
   })
-    $('#btn_van').click(function(){
-   var van = arr_van[Math.floor(Math.random() * (arr_van.length-1))];
-     $('#lbl_dau').text(van).addClass('flash');
-     setTimeout(function(){ $('#lbl_dau').removeClass('flash')},1200)
-  })
 
+
+    $('#btn_van').click(function(){
+         var van = arr_van[Math.floor(Math.random() * (arr_van.length-1))].split(' ');
+           var html_van = '';
+           $.each(van,function(){
+               html_van += '<span>'+this+'</span>&nbsp;';
+
+           })
+           $('#lbl_dau').html(html_van).addClass('flash');
+           setTimeout(function(){ $('#lbl_dau').removeClass('flash')},1200)
+    })
+
+    $('#lbl_dau').on('click','span',function(){
+        $(this).toggleClass('hl')
+    })
+  
   });
     </script>
 
